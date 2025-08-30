@@ -117,9 +117,6 @@ public abstract class IridiumTeams<T extends Team, U extends IridiumUser<T>> ext
     public abstract Enhancements getEnhancements();
 
     public abstract Commands<T, U> getCommands();
-
-    public abstract BlockValues getBlockValues();
-
     public abstract Top<T> getTop();
 
     public abstract BankItems getBankItems();

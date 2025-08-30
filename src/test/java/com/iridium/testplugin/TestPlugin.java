@@ -30,7 +30,6 @@ public class TestPlugin extends IridiumTeams<TestTeam, User> {
     private Configuration configuration;
     private Messages messages;
     private Commands<TestTeam, User> commands;
-    private BlockValues blockValues;
     private Top<TestTeam> top;
     private Permissions permissions;
     private Inventories inventories;
@@ -65,7 +64,6 @@ public class TestPlugin extends IridiumTeams<TestTeam, User> {
         this.configuration = new Configuration();
         this.messages = new Messages();
         this.commands = new Commands<>();
-        this.blockValues = new BlockValues();
         this.top = new Top<>();
         this.permissions = new Permissions();
         this.inventories = new Inventories();
@@ -133,10 +131,6 @@ public class TestPlugin extends IridiumTeams<TestTeam, User> {
 
     public Commands<TestTeam, User> getCommands() {
         return this.commands;
-    }
-
-    public BlockValues getBlockValues() {
-        return this.blockValues;
     }
 
     public Top<TestTeam> getTop() {

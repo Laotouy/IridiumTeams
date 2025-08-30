@@ -4,7 +4,6 @@ import com.cryptomorin.xseries.XMaterial;
 import com.iridium.iridiumcore.utils.StringUtils;
 import com.iridium.iridiumteams.*;
 import com.iridium.iridiumteams.api.EnhancementUpdateEvent;
-import com.iridium.iridiumteams.configs.BlockValues;
 import com.iridium.iridiumteams.database.*;
 import com.iridium.iridiumteams.enhancements.Enhancement;
 import com.iridium.iridiumteams.enhancements.EnhancementData;
@@ -213,19 +212,7 @@ public abstract class TeamManager<T extends Team, U extends IridiumUser<T>> {
     }
 
     public double getTeamValue(T team) {
-        return teamValueCache.get(team, Duration.ofSeconds(1), () -> {
-            double value = 0;
-
-            for (Map.Entry<XMaterial, BlockValues.ValuableBlock> valuableBlock : iridiumTeams.getBlockValues().blockValues.entrySet()) {
-                value += getTeamBlock(team, valuableBlock.getKey()).getAmount() * valuableBlock.getValue().value;
-            }
-
-            for (Map.Entry<EntityType, BlockValues.ValuableBlock> valuableSpawner : iridiumTeams.getBlockValues().spawnerValues.entrySet()) {
-                value += getTeamSpawners(team, valuableSpawner.getKey()).getAmount() * valuableSpawner.getValue().value;
-            }
-
-            return value;
-        });
+        return 0;
     }
 
     public abstract TeamEnhancement getTeamEnhancement(T team, String enhancement);

@@ -41,7 +41,6 @@ public class Inventories {
     public Item previousPage;
     public NoItemGUI blockValueGUI;
     public NoItemGUI spawnerValueGUI;
-    public BlockValuesTypeSelectorInventoryConfig blockValuesTypeSelectorGUI;
 
     public Inventories() {
         this("Team", "&c");
@@ -125,9 +124,5 @@ public class Inventories {
 
         spawnerValueGUI = new NoItemGUI(54, "&7Spawner Values - Page %page% of %max_pages%", background1);
 
-        blockValuesTypeSelectorGUI = new BlockValuesTypeSelectorInventoryConfig(27, "&7" + team + " Block Values", background2,
-                new BlockValuesTypeSelectorInventoryConfig.BlockTypeItem(new Item(XMaterial.DIAMOND_BLOCK, 11, 1, color + "&lBlocks", Collections.emptyList()), true),
-                new BlockValuesTypeSelectorInventoryConfig.BlockTypeItem(new Item(XMaterial.SPAWNER, 15, 1, color + "&lSpawners", Collections.emptyList()), true)
-        );
     }
 }

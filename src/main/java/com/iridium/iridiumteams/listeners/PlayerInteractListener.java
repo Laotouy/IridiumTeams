@@ -120,6 +120,10 @@ import java.util.List;
             Player player = event.getPlayer();
             U user = iridiumTeams.getUserManager().getUser(player);
 
+            if (event.getRightClicked().getType().name().equalsIgnoreCase("cobblemon_pokemon") || event.getRightClicked().getType().name().equalsIgnoreCase("player")){
+                return;
+            }
+
             iridiumTeams.getTeamManager().getTeamViaPlayerLocation(player, event.getRightClicked().getLocation()).ifPresent(team -> {
                 if (!iridiumTeams.getTeamManager().getTeamPermission(team, user, PermissionType.INTERACT.getPermissionKey())) {
                     player.sendMessage(StringUtils.color(iridiumTeams.getMessages().cannotInteract
