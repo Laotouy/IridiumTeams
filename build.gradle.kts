@@ -5,7 +5,7 @@ plugins {
 }
 
 group = "com.iridium"
-version = "2.6.0"
+version = "2.6.1"
 description = "IridiumTeams"
 
 repositories {
@@ -36,7 +36,7 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.21.4-R0.1-SNAPSHOT")
     compileOnly("com.github.MilkBowl:VaultAPI:1.7")
     compileOnly("me.clip:placeholderapi:2.11.6")
-    compileOnly("dev.rosewood:rosestacker:1.5.33")
+    compileOnly("dev.rosewood:rosestacker:1.5.35")
     compileOnly("com.bgsoftware:WildStackerAPI:2025.1")
     compileOnly("com.moyskleytech:ObsidianStackerAPI:1.0.0")
     compileOnly("net.ess3:EssentialsXSpawn:2.16.1")
@@ -48,8 +48,8 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.38")
 
     // Test dependencies
-    testImplementation(platform("org.junit:junit-bom:5.13.2"))
-    testImplementation("org.junit.jupiter:junit-jupiter:5.13.2")
+    testImplementation(platform("org.junit:junit-bom:5.13.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter:5.13.4")
     testImplementation("com.github.seeseemelk:MockBukkit-v1.18:2.85.2")
     testImplementation("com.github.MilkBowl:VaultAPI:1.7")
 }
