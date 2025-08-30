@@ -22,6 +22,11 @@ public class EntitySpawnListener<T extends Team, U extends IridiumUser<T>> imple
 
     @EventHandler(ignoreCancelled = true)
     public void onEntitySpawn(EntitySpawnEvent event) {
+
+        if (event.getEntityType().name().equalsIgnoreCase("cobblemon_pokemon")){
+            return;
+        }
+
         Optional<T> currentTeam = iridiumTeams.getTeamManager().getTeamViaLocation(event.getEntity().getLocation());
         if (currentTeam.isPresent()) {
             TeamSetting teamSetting = iridiumTeams.getTeamManager().getTeamSetting(currentTeam.get(), SettingType.MOB_SPAWNING.getSettingKey());
